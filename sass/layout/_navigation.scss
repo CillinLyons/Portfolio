@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 9rem;
+  padding: 0 4rem;
+
+  &__container {
+    display: flex;
+    flex: 0 0 33.333333%;
+
+    &--left {
+      justify-content: start;
+    }
+
+    &--centre {
+      justify-content: center;
+    }
+
+    &--right {
+      justify-content: end;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item--right {
+    margin-left: 4rem;
+  }
+
+  &__item--left {
+    margin-right: 4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
