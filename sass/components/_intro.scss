@@ -1,0 +1,53 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+
+  &__sun {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__avatar-img {
+    width: 22rem;
+
+    @include respond(tab-land) {
+      width: 25rem;
+    }
+
+    @include respond(phone) {
+      width: 20rem;
+    }
+
+    @include respond(small-phone) {
+      width: 15rem;
+    }
+  }
+
+  &__welcome-text {
+    height: 10rem;
+    width: 95vw;
+    text-align: center;
+  }
+
+  &__tree {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__tree-img {
+    width: 18rem;
+    @include respond(phone) {
+      width: 15rem;
+    }
+
+    @include respond(small-phone) {
+      width: 12rem;
+    }
+  }
+}

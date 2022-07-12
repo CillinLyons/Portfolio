@@ -1,0 +1,57 @@
+// The typing effect
+@keyframes typing {
+  40% {
+    left: calc(100% + 0.2rem);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+// The slide effect
+@keyframes slide {
+  100% {
+    top: -6.6rem;
+  }
+}
+
+// Move in from left
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Move in from right
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Fade
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Fading animation
+.fade {
+  animation-name: fade;
+  animation-duration: 1.7s;
+}

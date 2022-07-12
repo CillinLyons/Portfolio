@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-image: linear-gradient(
+    ($color-primary-dark),
+    ($color-primary-light)
+  );
+}

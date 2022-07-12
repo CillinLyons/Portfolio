@@ -1,0 +1,103 @@
+.bio {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(phone) {
+      padding: 0 4rem;
+    }
+  }
+
+  &__row-start {
+    display: flex;
+    max-width: 88rem;
+
+    @include respond(tab-land) {
+      max-width: 75rem;
+      align-items: center;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__row-end {
+    display: flex;
+    justify-content: end;
+    max-width: 88rem;
+    margin: 7rem 0;
+
+    @include respond(tab-land) {
+      max-width: 75rem;
+      align-items: center;
+      text-align: end;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: end;
+      margin: 2rem 0;
+    }
+  }
+
+  &__col-text {
+    align-self: center;
+  }
+
+  &__text-1,
+  &__text-3 {
+    padding-right: 5rem;
+  }
+
+  &__text-2 {
+    padding-left: 5rem;
+  }
+
+  &__col-icon--right {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    @include respond(phone) {
+      align-self: start;
+      margin-top: 4rem;
+    }
+  }
+
+  &__col-icon--left {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    @include respond(phone) {
+      align-self: end;
+      margin-top: 4rem;
+    }
+  }
+
+  &__icon {
+    height: 12rem;
+    fill: url(#icon-gradient);
+    color: transparent;
+
+    @include respond(phone) {
+      width: 10rem;
+    }
+  }
+
+  &__text {
+    align-self: center;
+  }
+}
+
+.rightAnimation {
+  animation: moveInRight 2s;
+}
+
+.leftAnimation {
+  animation: moveInLeft 2s;
+}

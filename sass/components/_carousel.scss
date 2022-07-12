@@ -1,0 +1,57 @@
+.carousel {
+  &__container {
+    max-width: 60vw;
+    position: relative;
+    margin: auto;
+
+    @include respond(phone) {
+      max-width: 90vw;
+      margin-top: 2rem;
+    }
+    @include respond(small-phone) {
+      max-width: 90vw;
+      margin-top: 8rem;
+    }
+  }
+
+  &__slides {
+    display: none;
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 20rem;
+    border-radius: 50%;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__dot {
+    cursor: pointer;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin: 0 2px;
+    background-color: $color-light-dot;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+}
+
+.active-dot,
+.carousel__dot:hover {
+  background-color: $color-dark-dot;
+}

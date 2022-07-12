@@ -10,27 +10,54 @@
 
 ORDER: Base + typography > general layout + grid > page layout > components
 */
-/*
+
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-      @media only screen and (max-width: 37.5em) {
-        @content;
-      } //600px
-    }
-    @if $breakpoint == tab-port {
-      @media only screen and (max-width: 56.25em) {
-        @content;
-      } //900px
-    }
-    @if $breakpoint == tab-land {
-      @media only screen and (max-width: 75em) {
-        @content;
-      } //1200px
-    }
-    @if $breakpoint == big-desk {
-      @media only screen and (min-width: 112.5em) {
-        @content;
-      } //1800px
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 20em) {
+      @content;
+    } //300px
+  }
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}
+
+@mixin headerHeight($breakpoint) {
+  @if $breakpoint == extraSmallSize {
+    @media only screen and (max-height: 40em) {
+      @content;
     }
   }
-  */
+  @if $breakpoint == smallSize {
+    @media only screen and (max-height: 50em) {
+      @content;
+    }
+  }
+  @if $breakpoint == mediumSize {
+    @media only screen and (max-height: 55em) {
+      @content;
+    }
+  }
+  @if $breakpoint == largeSize {
+    @media only screen and (max-height: 65em) {
+      @content;
+    }
+  }
+}

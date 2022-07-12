@@ -1,0 +1,13 @@
+.heading {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include respond(phone) {
+      width: 95vw;
+    }
+  }
+}

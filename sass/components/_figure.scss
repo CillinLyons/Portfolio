@@ -1,0 +1,99 @@
+.figure {
+  margin: 0 auto 0.55em;
+  width: 90%;
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  @media screen and (min-width: 769px) {
+    .figure {
+      width: 80%;
+    }
+  }
+
+  &__figcaption {
+    position: absolute;
+    height: 10rem;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    z-index: 100;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    -moz-transform: translate3d(
+      -100%,
+      -50%,
+      0
+    ); /* position caption outside layout horizontally and centered vertically */
+    -webkit-transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
+    opacity: 0;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    top: 100%;
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: $color-grey-font;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 5%;
+    margin: 3rem auto;
+    padding: 0;
+    display: block;
+    position: relative;
+    overflow: hidden; /* hide overflowing elements by default */
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  &__pushup:hover &__img {
+    -moz-transform: translate3d(
+      0,
+      -2rem,
+      0
+    ); /* move image up vertically a bit for parallax effect */
+    -webkit-transform: translate3d(0, -2rem, 0);
+    transform: translate3d(0, -2rem, 0);
+    opacity: 0.5;
+  }
+
+  &__pushup:hover &__figcaption {
+    // move caption up vertically to fully reveal caption
+    -moz-transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    box-shadow: 0px -2px 2.8rem rgba(0, 0, 0, 0.3);
+  }
+}

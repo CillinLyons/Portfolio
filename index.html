@@ -11,69 +11,385 @@
     <link rel="icon" href="favicon.ico" type="images/x-icon" />
 
     <script defer src="script.js"></script>
+    <!--
+    <script
+      src="https://kit.fontawesome.com/deaeddb23e.js"
+      crossorigin="anonymous"
+    ></script>
+    -->
 
     <title>Cillin Lyons | Web Developer | Portfolio</title>
   </head>
 
   <body>
-    <header>
-      <!-- Navbar -->
-      <section id="navbar-section">
-        <nav class="nav">
-          <div class="nav__container nav__container--left">
-            <ul class="nav__links">
-              <li class="nav__item--left">
-                <a class="nav__link" href="#section--1">About</a>
-              </li>
-              <li class="nav__item--left">
-                <a class="nav__link" href="#section--2">Work</a>
-              </li>
-              <li class="nav__item--left">
-                <a class="nav__link" href="#section--3">Contact</a>
-              </li>
-            </ul>
+    <section id="navigation-section">
+      <div class="nav">
+        <div class="nav__container nav__container--left">
+          <img
+            src="images/Logo3.png"
+            alt="Logo"
+            class="nav__logo"
+            id="logo"
+            data-version-number="3.0"
+          />
+        </div>
+        <div class="nav__container nav__container--right">
+             
+                <input
+                  type="checkbox"
+                  class="nav__checkbox"
+                  id="nav-toggle"
+                />
+                
+                <label for="nav-toggle" class="nav__label">
+                  <img class="nav__sun-img" src="images/sun.png" alt="" />
+                 
+                  <span class="nav__button">&nbsp;</span>
+                </label>
+                <div class="nav__background">&nbsp;</div>
+                
+
+                <nav class="nav__menu">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <a id="bio-link" href="#bio-section" class="nav__link"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a href="#project-section" class="nav__link"
+                        >Work</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a href="#contact-section" class="nav__link"
+                        >Contact</a
+                      >
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="https://www.linkedin.com/in/cillin-lyons/" target="_blank">
+                          <svg class="nav__icon">
+                          <use class="nav__svg" xlink:href="images/sprite.svg#icon-linkedin2">
+                          </use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">
+                        <svg class="nav__icon">
+                        <use class="nav__svg" xlink:href="images/sprite.svg#icon-codepen"></use>
+                      </svg>
+                    </a>
+                    </li>
+                  </ul>
+                </nav>
+              
+        </div>
+      </div>
+    </section>
+    <header class="header">
+      <!-- Intro -->
+      <section id="intro-section">
+        <div class="intro">
+          <div class="intro__avatar">
+            <img class="intro__avatar-img" src="images/bighead.png" alt="" />
+            <h1 class="intro__welcome-text heading-secondary"></h1>
           </div>
-          <div class="nav__container nav__container--centre">
-            <img
-              src="img/logo.png"
-              alt="Logo"
-              class="nav__logo"
-              id="logo"
-              data-version-number="3.0"
-            />
+          <div class="intro__tree">
+            <img class="intro__tree-img" src="images/palm-tree.png" alt="" />
           </div>
-          <div class="nav__container nav__container--right">
-            <ul class="nav__links">
-              <li class="nav__item--right">
-                <a class="nav__link" href="#">L</a>
-              </li>
-              <li class="nav__item--right">
-                <a class="nav__link" href="#">C</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        </div>
       </section>
     </header>
 
     <main>
-      <!-- Intro -->
-      <section id="intro-section"></section>
-
       <!-- Bio -->
-      <section id="bio-section"></section>
+      <section id="bio-section">
+        <div class="bio__container">
+          <div class="bio__row-start">
+            <div class="bio__col-text">
+              <p class="bio__text-1 paragraph">
+                Since graduating from D.I.T with a bachelor's degree in computer
+                science (and receiving a scholarship for a semester in South
+                Korea along the way) I've continued to hone my scientific and
+                artistic skills.
+              </p>
+            </div>
+            <div class="bio__col-icon--right">
+              <div class="bio__icon-1">
+                <svg class="bio__icon">
+                  <defs>
+                    <linearGradient id="icon-gradient" x2="0.35" y2="1">
+                      <stop offset="5%" stop-color="#d8f2ff" />
+                      <stop offset="95%" stop-color="#2998ff" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="images/sprite.svg#icon-graduation-cap"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="bio__row-end">
+            <div class="bio__col-icon--left">
+              <div class="bio__icon-2">
+                <svg class="bio__icon">
+                  <use xlink:href="images/sprite.svg#icon-embed2"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="bio__col-text">
+              <p class="bio__text-2 paragraph">
+                Partly through working for SAP for 5 years. But also through
+                taking further courses in HTML5, CSS, SCSS, Tailwind, JS, Vue,
+                React, TypeScript, GIT, Web Design and more.
+              </p>
+            </div>
+          </div>
+          <div class="bio__row-start">
+            <div class="bio__col-text">
+              <p class="bio__text-3 paragraph">
+                I enjoy maintaining a balanced life by investing my time in
+                other projects of interest, such as photography, poetry,
+                gardening, reading and meditation to name a few.
+              </p>
+            </div>
+            <div class="bio__col-icon--right">
+              <div class="bio__icon-3">
+                <svg class="bio__icon">
+                  <use xlink:href="images/sprite.svg#icon-balance-scale"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Projects -->
-      <section id="project-section"></section>
+      <section id="project-section">
+        <div class="project__container">
+          <div class="project__heading heading__row">
+            <h1 class="project__heading--primary heading-primary">Recent Work</h1>
+            <h2 class="project__heading--secondary heading-tertiary">Below are my most recent design & development projects:</h2>
+          </div>
+          <div class="project__row">
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/cais-dos-anjos.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://caisdosanjos.com/"
+                    target="_blank"
+                    >Cais Dos Anjos - BnB</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/arambha.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://arambha.net/"
+                    target="_blank"
+                    >Bankist - DOM, Numbers, Dates, Intl & Timers</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/forkify.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://arambha.net/"
+                    target="_blank"
+                    >Forkify - Promise, Async/Await, AJAX</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/nexter.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://arambha.net/"
+                    target="_blank"
+                    >Nexter - Grid</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/mapty.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://arambha.net/"
+                    target="_blank"
+                    >Mapty - OOP, Geolocation, External Libraries</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="project__col">
+              <figure class="figure figure__pushup">
+                <img
+                  class="figure__img"
+                  src="images/trillo.png"
+                  alt="Elephant at sunset"
+                />
+                <figcaption class="figure__figcaption">
+                  <a
+                    class="figure__link"
+                    href="https://arambha.net/"
+                    target="_blank"
+                    >Trillo - Flexbox</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!--
+          <div class="project__row">
+            <button class="project__button">See more..</button>
+          </div>
+          -->
+        </div>
+      </section>
 
       <!-- Testimonials -->
-      <section id="testimonial-section"></section>
+      <section id="review-section">
+        <div class="review__heading heading__row">
+          <h1 class="review__heading--primary heading-primary">Reviews</h1>
+          <h2 class="review__heading--secondary heading-tertiary">People I've worked with have said some nice things...</h2>
+        </div>
+        <!-- Carousel container -->
+        <div class="carousel__container">
+          <div class="carousel__slides fade">
+            <div class="carousel__slide">
+              <img
+                class="carousel__img"
+                src="images/marcus.png"
+                alt="testimonial photo"
+              />
+              <p class="carousel__text paragraph">
+                "We liked the idea that you get all included from one man.
+                Direct and friendly communication, creative and up-to-date
+                execution. Cillin had great ideas and awesome implementation."
+              </p>
+              <h3 class="carousel__title heading-tertiary">Marcus Hell</h3>
+              <h4 class="carousel__subtitle heading-tertiary">
+                Arambha Eco-Village & Barefoot School Co-Founder
+              </h4>
+            </div>
+          </div>
+
+          <div class="carousel__slides fade">
+            <div class="carousel__slide">
+              <img
+                class="carousel__img"
+                src="images/julius.png"
+                alt="testimonial photo"
+              />
+              <p class="carousel__text paragraph">
+                "Cillin was readily available to help me out, creating a website
+                that reflects my hostel and what it has to offer. His expertise,
+                patience and personal touch made the entire experience a
+                pleasure, I can recommend him to anyone."
+              </p>
+              <h3 class="carousel__title heading-tertiary">Julius Van De Vijver</h3>
+              <h4 class="carousel__subtitle heading-tertiary">The Grapevine Hostel Manager</h4>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <!-- The dots/circles -->
+        <div class="carousel__dots" style="text-align: center">
+          <span class="carousel__dot" onclick="currentSlide(1)"></span>
+          <span class="carousel__dot" onclick="currentSlide(2)"></span>
+        </div>
+      </section>
 
       <!-- Contact -->
-      <section id="contact-section"></section>
+      <section id="contact-section">
+        <div class="contact__heading heading__row">
+          <h1 class="contact__heading--primary heading-primary">Contact</h1>
+          <h2 class="contact__heading--secondary heading-tertiary">I’m always open to discussing web development projects or partnership opportunities.</h2>
+        </div>
+        <form method="POST" id="contact" name="contact" class="contact" novalidate="novalidate" action="email.php" onsubmit="this.submit(); this.reset(); return false;">
+          <div class="contact__container">
+            <div class="contact__row">
+              <div class="contact__col--sm">
+                <label class="contact__label">
+                  Name:
+                </label>
+              </div>
+              <div class="contact__col--md">
+                <input type="text" class="contact__input" name="name" id="name">
+              </div>
+            </div>
+            <div class="contact__row">
+              <div class="contact__col--sm">
+                <label class="contact__label">
+                  Email:
+                </label>
+              </div>
+              <div class="contact__col--md">
+                <input type="email" class="contact__input" name="email" id="email">
+                                  </div>
+              </div>
+            <div class="contact__row">
+              <div class="contact__col--sm">
+                <label class="contact__label">
+                  Message:
+                </label>
+              </div>
+              <div class="contact__col--md">
+                <textarea class="contact__input" name="message" id="message" cols="30" rows="4"></textarea>
+                <button class="contact__button btn" type="submit" name="submit">Send</button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
+      <!-- Footer -->
+  <footer id="footer-section" class="footer">
+    <div class="footer__text heading-tertiary">
+      &copy Copyright 2022
+    </div>
+  </footer>
   </body>
-
-  <!-- Footer -->
-  <footer id="footer-section"></footer>
 </html>
